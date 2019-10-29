@@ -21,7 +21,6 @@ body {
 	flex-flow: row wrap;
 	justify-content: center;
 	max-width: 1200px;
-	padding: 1em;
 	width: 90%;
 }
 
@@ -55,19 +54,24 @@ p {
 	line-height: 1.3125em;
 }
 
+ul {
+    margin: 0;
+}
+
 /*The widths are in a percentage!*/
 header {
 	align-items: center;
 	display: flex;
-	flex-flow: column nowrap;
+	flex-flow: row wrap;
 	justify-content: center;
+	text-align: center;
 	width: 100%;
 }
 
 header h1 {
 	border-bottom: 3px solid #77a466;
-	margin: 0 auto;
-	padding: 1em 0;
+	margin: 0;
+    padding: 38px 20px 20px 20px; 
 	text-align: center;
 	width: 100%;
 }
@@ -77,7 +81,8 @@ header h1 span {
 }
 
 header nav {
-	padding: 0.5em 0;
+	padding: 20px 0;
+	width: 100%;
 }
 
 header nav ul {
@@ -89,15 +94,12 @@ header nav ul {
 header nav ul li {
 	font-size: 0.875em;
 	font-weight: 700;
-	padding: 0 10px;
+	padding: 10px 0;
 	text-transform: uppercase;
 }
 
 header nav ul li a {
 	color: #77a466;
-	display: block;
-	padding: 1em 2em;
-	text-align: center;
 	text-decoration: none;
 }
 
@@ -105,15 +107,14 @@ header nav ul li a {
 .top-section,
 .bottom-section {
 	display: flex;
-	flex-flow: row wrap; 
-	justify-content: center;
-	width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 .main-image img {
 	border-bottom: 3px solid #77a466;
 	border-top: 3px solid #77a466;
-	height: auto;
 	width: 100%;
 }
 
@@ -129,8 +130,7 @@ header nav ul li a {
 }
 .main-title p {
 	font-size: 1em;
-	line-height: 1.5;
-	margin-top: 0;
+	line-height: 1.5625;
 	padding: 0;
 }
 
@@ -138,14 +138,7 @@ header nav ul li a {
 .section-two,
 .section-three {
 	border-top: 1px solid #eee;
-	height: auto;
 	width: 100%;
-}
-
-.section-one h4,
-.section-two h4,
-.section-three h4 {
-	padding: .5em 0;
 }
 
 .menu {
@@ -154,19 +147,19 @@ header nav ul li a {
 }
 
 .menu li {
-	padding: .5em 0;
+	padding: 10px 0;
 	color:#77a466;
 }
 
 .reviews {
 	color: #333;
 	font-size: 1em;
-	line-height: 1.5;
+	line-height: 1.3125;
 }
 
 .address {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1em;
+	line-height: 1.5;
 }
 
 /*The widths are in a percentage!*/
@@ -174,9 +167,11 @@ footer {
 	align-items: center;
 	border-top: 3px solid #eee;
 	display: flex;
+	flex-flow: row wrap;
 	height: 50px;
 	justify-content: center;
 	width: 100%;
+    text-align: center;
 }
 
 footer span {
@@ -189,32 +184,46 @@ footer span {
 @media all and (min-width:768px) {
     /* Tablet styles here */
 
-.bottom-section {
-	flex-flow: row nowrap;
+.bottom-section{
+	justify-content: space-between;
+	align-items: flex-start;
+	border-top: 1px solid #eee;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: calc(100%/3);
-}
-
-.section-one {
-	padding: 10px 0;
+	border-top: none;
+	flex-basis: 30%;
 }
 
 .section-two {
 	border-left: 1px solid #eee;
 	border-right: 1px solid #eee;
-	padding: 10px 30px;
-}
-
-.section-three {
-	padding: 10px 0 10px 30px;
+	padding: 0 20px;
 }
 }
  
 @media all and (min-width:1200px) {
     /* Desktop styles here */
- 
+header {
+	justify-content: space-between;
+	padding-bottom: 10px; 
+}
+
+header h1 {
+	width: 30%;
+    padding: 0;
+    border-bottom: none;
+    text-align: left;
+}
+
+header nav {
+	width: 40%;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: space-between;
+}
 }
