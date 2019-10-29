@@ -185,3 +185,36 @@ footer span {
 	color: #77a466;
 	font-size: 0.875em;
 }
+
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+
+.bottom-section {
+	flex-flow: row nowrap;
+}
+
+.section-one,
+.section-two,
+.section-three {
+	width: calc(100%/3);
+}
+
+.section-one {
+	padding: 10px 0;
+}
+
+.section-two {
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	padding: 10px 30px;
+}
+
+.section-three {
+	padding: 10px 0 10px 30px;
+}
+}
+ 
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+ 
+}
